@@ -11,7 +11,7 @@ def run_pipeline(input_path: str, output_file: str):
         # check if outfile exists
         outfile = os.path.exists(output_file)
         if not outfile:
-            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            os.makedirs(os.path.dirname(f"./data/{output_file}"), exist_ok=True)
 
         # pull json data
         df = extract_data(input_path)
