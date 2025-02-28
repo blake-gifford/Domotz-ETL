@@ -19,8 +19,7 @@ def run_pipeline(input_path: str, output_file: str, input_data: dict):
             )
 
         # pull json data
-        df = extract_data(input_path)
-        print(sys.getsizeof(df))
+        df = extract_data(input_path, input_data)
         df = transform_data(df)
         load_data(output_file, df)
 
